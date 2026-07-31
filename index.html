@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="format-detection" content="telephone=no">
+<title>DAVE WEB SITES | Freelance Web Designer Premium</title>
+<meta name="description" content="Freelance Web Designer : création de sites vitrine, réservation, e-commerce. Design moderne, livraison rapide, contact direct WhatsApp.">
+<meta property="og:title" content="DAVE WEB SITES | Freelance Web Designer Premium">
+<meta property="og:description" content="Des sites qui génèrent des clients. Design moderne, résultats concrets, livraison en 7 jours.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#070707;--panel:#111;--orange:#ff6a00;--amber:#ffb300;--gold:#FFD700;--cyan:#00D4FF;--text:#ffffff;--muted:#c8c8c8}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden}
+body::before{content:'';position:fixed;top:6px;left:6px;right:6px;bottom:6px;border:2px solid var(--orange);border-radius:20px;box-shadow:0 0 30px rgba(255,106,0,.5),inset 0 0 30px rgba(255,106,0,.3);z-index:-1;pointer-events:none;animation:pulseSoft 4s ease-in-out infinite}
+@keyframes pulseSoft{0%,100%{box-shadow:0 0 30px rgba(255,106,0,.4),inset 0 0 30px rgba(255,106,0,.25)}50%{box-shadow:0 0 45px rgba(255,170,0,.55),inset 0 0 45px rgba(255,170,0,.35)}}
+@media (prefers-reduced-motion:reduce){body::before{animation:none}}
+.container{max-width:1300px;margin:auto;padding:0 5%}
+a:focus-visible,button:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+header{position:fixed;top:0;left:0;right:0;padding:20px 5%;background:rgba(7,7,7,.95);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);display:flex;justify-content:space-between;align-items:center;z-index:1000;border-bottom:2px solid var(--orange)}
+header h2{font-family:'Orbitron',sans-serif;font-size:22px;font-weight:900;letter-spacing:2px;color:var(--cyan)}
+nav{display:flex;align-items:center;gap:30px}
+nav a{color:#fff;text-decoration:none;font-weight:700;font-size:15px;transition:color .2s}
+nav a:hover{color:var(--orange)}
+.burger{display:none;flex-direction:column;gap:5px;background:0;border:0;cursor:pointer;padding:8px}
+.burger span{width:26px;height:3px;background:#fff;border-radius:2px}
+.mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;background:#0a0a0a;border-bottom:2px solid var(--orange);flex-direction:column;padding:10px 5% 20px;z-index:999}
+.mobile-menu.open{display:flex}
+.mobile-menu a{color:#fff;text-decoration:none;padding:14px 0;font-weight:700;border-bottom:1px solid #222}
+.hero{min-height:100svh;display:flex;align-items:center;padding-top:100px;background:linear-gradient(135deg,#070707 0%,#140800 100%)}
+.hero h1{font-family:'Orbitron',sans-serif;font-size:clamp(34px,6vw,58px);font-weight:900;line-height:1.15;margin-bottom:22px;color:#fff}
+.hero h1 .blue{color:var(--cyan)}
+.hero h1 .orange{color:var(--orange)}
+.hero p{font-size:18px;color:var(--muted);margin-bottom:36px;max-width:600px;line-height:1.6}
+.btn{padding:16px 42px;border-radius:8px;text-decoration:none;font-weight:700;display:inline-block;transition:.25s;border:2px solid;letter-spacing:.5px;text-align:center}
+.btn-whatsapp{background:linear-gradient(90deg,var(--orange),#25D366);color:#000;border-color:var(--orange);position:relative;overflow:hidden;animation:pulseWhats 2s infinite;-webkit-tap-highlight-color:transparent}
+.btn-whatsapp:hover{background:linear-gradient(90deg,#25D366,var(--orange));color:#fff;box-shadow:0 0 25px #25D366;transform:scale(1.05)}
+@keyframes pulseWhats{0%{box-shadow:0 0 0 0 rgba(37,211,102,.7)}70%{box-shadow:0 0 0 15px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+.btn-tarifs{background:0;color:var(--amber);border-color:var(--amber)}
+.btn-tarifs:hover{background:var(--amber);color:#000}
+.btn-note{font-size:12px;color:#b0b0b0;width:100%}
+.cta-row{display:flex;flex-wrap:wrap;gap:16px;margin-bottom:10px}
+.pricing{padding:100px 0;background:#0f0f0f}
+.pricing h2{font-family:'Orbitron',sans-serif;text-align:center;font-size:clamp(28px,5vw,44px);margin-bottom:14px;color:#fff}
+.pricing h2 span{color:var(--orange)}
+.pricing .subtitle{text-align:center;color:#e0e0e0;margin-bottom:55px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:32px}
+.card{background:#181818;padding:40px 32px;border-radius:14px;border:2px solid #333;transition:border-color .3s,transform .3s}
+.card:hover{border-color:var(--orange);transform:translateY(-6px)}
+.card.featured{border-color:var(--orange);position:relative}
+.card.featured::after{content:"POPULAIRE";position:absolute;top:-12px;right:20px;background:var(--orange);color:#000;padding:5px 12px;font-size:12px;font-weight:900;border-radius:6px}
+.card h3{font-size:24px;margin-bottom:8px;color:var(--amber)}
+.card .tagline{color:#d0d0d0;font-size:14px;margin-bottom:18px}
+.price{font-size:44px;font-weight:900;color:var(--gold);margin:20px 0;line-height:1}
+.price span{font-size:16px;color:var(--orange);font-weight:700}
+.card ul{list-style:none;margin:26px 0}
+.card ul li{padding:10px 0;color:#f0f0f0;border-bottom:1px solid #333;font-size:15px}
+.card ul li::before{content:"✓ ";color:var(--orange);font-weight:bold;margin-right:8px}
+.contact{padding:90px 0;text-align:center;background:var(--bg)}
+.contact h2{font-family:'Orbitron',sans-serif;font-size:clamp(26px,5vw,38px);margin-bottom:16px;color:#fff}
+.contact h2 span{color:var(--orange)}
+.contact p{color:#e0e0e0;margin-bottom:30px}
+.payment-block{margin-top:50px;padding:30px;background:#111;border:2px solid var(--cyan);border-radius:12px;text-align:center}
+.payment-block h3{font-family:'Orbitron',sans-serif;color:var(--cyan);margin-bottom:12px;font-size:20px}
+.payment-block p{color:#e0e0e0;font-size:14px;line-height:1.8}
+.paypal-logo{font-size:32px;font-weight:900;color:#0070ba;margin-bottom:10px}
+footer{padding:30px 5%;text-align:center;color:#888;font-size:13px;border-top:1px solid #1a1a1a}
+@media(max-width:768px){nav{display:none}.burger{display:flex}}
+</style>
+</head>
+<body>
+<header>
+<h2>DAVE WEB SITES</h2>
+<nav aria-label="Navigation principale">
+<a href="#tarifs">Services</a>
+<a href="#contact">Contact</a>
+</nav>
+<button class="burger" aria-label="Ouvrir le menu" aria-expanded="false" id="burgerBtn" type="button">
+<span></span><span></span><span></span>
+</button>
+</header>
+<div class="mobile-menu" id="mobileMenu" role="menu">
+<a href="#tarifs" role="menuitem">Services</a>
+<a href="#contact" role="menuitem">Contact</a>
+</div>
+
+<main>
+<section class="hero">
+<div class="container">
+<h1><span class="blue">CRÉATION DE SITES WEB</span><br><span class="orange">HAUT DE GAMME</span></h1>
+<p>Des sites qui sortent de l'écran et génèrent des clients. Design moderne, résultats concrets, livraison rapide.</p>
+<div class="cta-row">
+<a href="https://wa.me/22957218397?text=Bonjour%20Dave%20Web%20Sites%2C%20je%20souhaite%20discuter%20d%27un%20projet." class="btn btn-whatsapp" target="_blank" rel="noopener">WhatsApp</a>
+<a href="#tarifs" class="btn btn-tarifs">Nos Tarifs</a>
+</div>
+<p class="btn-note">Dave — Réponse en 15 min</p>
+</div>
+</section>
+
+<section class="pricing" id="tarifs">
+<div class="container">
+<h2>NOS PACKS <span>PREMIUM</span></h2>
+<p class="subtitle">L'excellence digitale, à chaque budget</p>
+<div class="grid">
+<div class="card">
+<h3>ESSENTIEL</h3>
+<p class="tagline">Pour démarrer simplement</p>
+<p class="price">800 €<span> / projet</span></p>
+<ul>
+<li>Site vitrine 3 pages</li>
+<li>Design responsive</li>
+<li>Intégration WhatsApp</li>
+<li>Livraison en 5 jours</li>
+</ul>
+<a href="https://wa.me/22957218397?text=Bonjour%20Dave%20Web%20Sites%2C%20je%20veux%20commander%20le%20pack%20ESSENTIEL%20à%20800%E2%82%AC." class="btn btn-tarifs" target="_blank" rel="noopener">Commander</a>
+<p class="btn-note">50% d'acompte pour démarrer</p>
+</div>
+<div class="card">
+<h3>STANDARD</h3>
+<p class="tagline">Pour lancer votre présence en ligne</p>
+<p class="price">1 500 €<span> / projet</span></p>
+<ul>
+<li>Site vitrine 5 pages</li>
+<li>Design responsive + animations</li>
+<li>Intégration WhatsApp</li>
+<li>Livraison en 7 jours</li>
+</ul>
+<a href="https://wa.me/22957218397?text=Bonjour%20Dave%20Web%20Sites%2C%20je%20veux%20commander%20le%20pack%20STANDARD%20à%201500%E2%82%AC." class="btn btn-tarifs" target="_blank" rel="noopener">Commander</a>
+<p class="btn-note">50% d'acompte pour démarrer</p>
+</div>
+<div class="card featured">
+<h3>PRO</h3>
+<p class="tagline">Le plus choisi par nos clients</p>
+<p class="price">3 000 €<span> / projet</span></p>
+<ul>
+<li>Tout le pack Standard</li>
+<li>Système de réservation</li>
+<li>Google Maps + SEO avancé</li>
+<li>Support 3 mois</li>
+</ul>
+<a href="https://wa.me/22957218397?text=Bonjour%20Dave%20Web%20Sites%2C%20je%20veux%20commander%20le%20pack%20PRO%20à%203000%E2%82%AC." class="btn btn-tarifs" target="_blank" rel="noopener">Commander</a>
+<p class="btn-note">50% d'acompte pour démarrer</p>
+</div>
+<div class="card">
+<h3>LUXE</h3>
+<p class="tagline">Pour vendre en ligne sans limite</p>
+<p class="price">5 000 €<span> / projet</span></p>
+<ul>
+<li>Tout le pack Pro</li>
+<li>Boutique en ligne + paiement</li>
+<li>Animations premium</li>
+<li>Formation incluse</li>
+</ul>
+<a href="https://wa.me/22957218397?text=Bonjour%20Dave%20Web%20Sites%2C%20je%20veux%20commander%20le%20pack%20LUXE%20à%205000%E2%82%AC." class="btn btn-tarifs" target="_blank" rel="noopener">Commander</a>
+<p class="btn-note">50% d'acompte pour démarrer</p>
+</div>
+</div>
+
+<div class="payment-block">
+<div class="paypal-logo">PayPal</div>
+<h3>PAIEMENT 100% SÉCURISÉ</h3>
+<p>
+PayPal Business - Protection acheteur incluse<br>
+Facture officielle + Contrat fournis<br>
+Acompte de 50% pour démarrer le projet<br>
+Solde à la livraison
+</p>
+</div>
+</div>
+</section>
+
+<section class="contact" id="contact">
+<div class="container">
+<h2>PRÊT À PASSER AU NIVEAU <span>SUPÉRIEUR</span> ?</h2>
+<p>Parlons de votre projet sur WhatsApp maintenant</p>
+<a href="https://wa.me/22957218397?text=Bonjour%20Dave%20Web%20Sites%2C%20je%20souhaite%20discuter%20de%20mon%20projet." class="btn btn-whatsapp" target="_blank" rel="noopener">Contacter l'agence</a>
+<p class="btn-note">Dave — Réponse en 15 min</p>
+</div>
+</section>
+</main>
+
+<footer>
+<p>© 2026 DAVE WEB SITES — Tous droits réservés</p>
+</footer>
+
+<script defer>
+const burgerBtn=document.getElementById('burgerBtn');const mobileMenu=document.getElementById('mobileMenu');
+burgerBtn.addEventListener('click',()=>{const isOpen=mobileMenu.classList.toggle('open');burgerBtn.setAttribute('aria-expanded',isOpen)});
+mobileMenu.querySelectorAll('a').forEach(link=>{link.addEventListener('click',()=>{mobileMenu.classList.remove('open');burgerBtn.setAttribute('aria-expanded','false')})});
+</script>
+</body>
+</html>
